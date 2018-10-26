@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return response()->json([], 200);
-});
+Route::apiResource('contacts', 'ContactController');
+Route::apiResource('contacts/{contact}/messages', 'MessageController');
